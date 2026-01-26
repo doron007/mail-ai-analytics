@@ -17,6 +17,19 @@ function verifyTokenSimple(token: string): boolean {
   }
 }
 
+/**
+ * Get the base URL for redirects.
+ * Azure Container Apps does NOT forward X-Forwarded-Host, so we use APP_URL env var.
+ */
+function getBaseUrl(request: NextRequest): string {
+  if (process.env.APP_URL) {
+    return process.env.APP_URL;
+  }
+  const host = request.headers.get('host') || 'localhost:3000';
+  const protocol = host.includes('localhost') || host.includes('127.0.0.1') ? 'http' : 'https';
+  return `${protocol}://${host}`;
+}
+
 // Routes that don't require authentication
 const publicPaths = [
   '/auth',
@@ -39,7 +52,8 @@ export function middleware(request: NextRequest) {
 
   if (!authCookie || !verifyTokenSimple(authCookie)) {
     // Redirect to auth page
-    const authUrl = new URL('/auth', request.url);
+    const baseUrl = getBaseUrl(request);
+    const authUrl = new URL('/auth', baseUrl);
     authUrl.searchParams.set('redirect', pathname);
     return NextResponse.redirect(authUrl);
   }
