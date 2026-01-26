@@ -158,6 +158,18 @@ if [ -f ".env.local" ]; then
     export $(grep -v '^#' .env.local | grep -v '^$' | xargs)
 fi
 
+# Get the app's public FQDN for APP_URL
+# Azure Container Apps does NOT forward X-Forwarded-Host header, so we must set APP_URL explicitly
+echo "Retrieving app FQDN for APP_URL..."
+CONTAINER_APP_FQDN=$(az containerapp show --name "$APP_NAME" --resource-group "$RESOURCE_GROUP" --query "properties.configuration.ingress.fqdn" -o tsv)
+if [ -n "$CONTAINER_APP_FQDN" ]; then
+    APP_URL="https://$CONTAINER_APP_FQDN"
+    echo "APP_URL: $APP_URL"
+else
+    echo "Warning: Could not retrieve FQDN. APP_URL will not be set."
+    APP_URL=""
+fi
+
 az containerapp update \
     --name "$APP_NAME" \
     --resource-group "$RESOURCE_GROUP" \
@@ -165,7 +177,8 @@ az containerapp update \
         "N8N_WEBHOOK_URL=$N8N_WEBHOOK_URL" \
         "NEXT_PUBLIC_SUPABASE_URL=$NEXT_PUBLIC_SUPABASE_URL" \
         "NEXT_PUBLIC_SUPABASE_ANON_KEY=$NEXT_PUBLIC_SUPABASE_ANON_KEY" \
-        "AUTH_SECRET=$AUTH_SECRET"
+        "AUTH_SECRET=$AUTH_SECRET" \
+        "APP_URL=$APP_URL"
 
 # Get app URL
 echo ""

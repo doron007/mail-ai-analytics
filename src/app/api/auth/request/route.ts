@@ -1,16 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { generateMagicLink, AUTH_CONFIG } from '@/lib/auth';
 
+/**
+ * Get the base URL for magic links.
+ *
+ * Azure Container Apps does NOT forward X-Forwarded-Host header (only X-Forwarded-Proto and X-Forwarded-For).
+ * See: https://learn.microsoft.com/en-us/azure/container-apps/ingress-overview
+ *
+ * Therefore, we use the APP_URL environment variable which is set during deployment
+ * with the container app's public FQDN.
+ */
+function getBaseUrl(request: NextRequest): string {
+  // 1. Prefer APP_URL environment variable (set in production by deployment script)
+  if (process.env.APP_URL) {
+    return process.env.APP_URL;
+  }
+
+  // 2. Fallback for local development: use host header
+  const host = request.headers.get('host') || 'localhost:3000';
+  const protocol = host.includes('localhost') || host.includes('127.0.0.1') ? 'http' : 'https';
+  return `${protocol}://${host}`;
+}
+
 export async function POST(request: NextRequest) {
   try {
-    // Get the base URL - prefer forwarded headers for production behind reverse proxy
-    const forwardedHost = request.headers.get('x-forwarded-host');
-    const forwardedProto = request.headers.get('x-forwarded-proto') || 'https';
-    const host = forwardedHost || request.headers.get('host') || new URL(request.url).host;
-
-    // Use https in production, http only for localhost
-    const protocol = host.includes('localhost') || host.includes('127.0.0.1') ? 'http' : forwardedProto;
-    const baseUrl = `${protocol}://${host}`;
+    // Get the base URL for the magic link
+    const baseUrl = getBaseUrl(request);
 
     // Generate the magic link
     const magicLink = generateMagicLink(baseUrl);
