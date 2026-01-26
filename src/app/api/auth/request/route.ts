@@ -10,18 +10,11 @@ export async function POST(request: NextRequest) {
     // Generate the magic link
     const magicLink = generateMagicLink(baseUrl);
 
+    // n8n webhook URL for sending auth emails
+    const n8nWebhookUrl = 'https://n8n-sef.sef.energy/webhook/mail-ai-auth-email';
+
     // Send email via n8n webhook
-    const n8nWebhookUrl = process.env.N8N_AUTH_EMAIL_WEBHOOK;
-
-    if (!n8nWebhookUrl) {
-      console.error('N8N_AUTH_EMAIL_WEBHOOK not configured');
-      return NextResponse.json(
-        { error: 'Email service not configured' },
-        { status: 500 }
-      );
-    }
-
-    const emailResponse = await fetch(n8nWebhookUrl, {
+    const response = await fetch(n8nWebhookUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -34,18 +27,25 @@ export async function POST(request: NextRequest) {
       }),
     });
 
-    if (!emailResponse.ok) {
-      console.error('Failed to send email via n8n:', await emailResponse.text());
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Failed to send email via n8n:', response.status, errorText);
       return NextResponse.json(
-        { error: 'Failed to send email' },
+        { error: 'Failed to send login email' },
         { status: 500 }
       );
     }
 
+    // Mask email for response (show first 2 chars and domain)
+    const maskedEmail = AUTH_CONFIG.authorizedEmail.replace(
+      /^(.{2}).*(@.*)$/,
+      '$1***$2'
+    );
+
     return NextResponse.json({
       success: true,
-      message: 'Magic link sent to your email',
-      email: AUTH_CONFIG.authorizedEmail.replace(/(.{2}).*(@.*)/, '$1***$2'), // Mask email
+      message: 'Magic link sent',
+      email: maskedEmail,
     });
   } catch (error) {
     console.error('Auth request error:', error);

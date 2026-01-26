@@ -52,9 +52,9 @@ function AuthContent() {
     <div className="bg-gray-900 border border-gray-800 rounded-lg p-8 shadow-xl">
       {/* Logo/Title */}
       <div className="text-center mb-8">
-        <div className="w-16 h-16 bg-blue-600 rounded-xl mx-auto mb-4 flex items-center justify-center">
+        <div className="w-16 h-16 bg-blue-600 rounded-xl mx-auto mb-4 flex items-center justify-content-center">
           <svg
-            className="w-10 h-10 text-white"
+            className="w-10 h-10 text-white mx-auto"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -108,7 +108,7 @@ function AuthContent() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               />
             </svg>
           </div>
