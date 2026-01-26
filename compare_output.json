@@ -1,0 +1,207 @@
+[
+    {
+        "outlook_email": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAAAAEJAACmw3CNPZbYSZ3OcRIMgHGjAACjuX7LAAA=",
+            "subject": "Re: SEF Field Engineer - Move forward to the next step",
+            "conversationId": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "received": "2026-01-15T21:00:56Z",
+            "folder": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAuAAAAAAB5T2z6T9yVRIpALvZ7Q3jrAQCmw3CNPZbYSZ3OcRIMgHGjAAAAAAEJAAA="
+        },
+        "database_record": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAAAAEJAACmw3CNPZbYSZ3OcRIMgHGjAACjuX7LAAA=",
+            "conversation_id": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "subject": "Re: SEF Field Engineer - Move forward to the next step",
+            "final_folder": "Sent Items"
+        },
+        "match_results": {
+            "message_id_matches": true,
+            "conversation_id_matches": true,
+            "subject_matches": true
+        },
+        "conclusion": "SCENARIO 1: Message ID matches database - ID is valid, problem is elsewhere"
+    },
+    {
+        "outlook_email": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAACmw3CNPZbYSZ3OcRIMgHGjAACkBco8AAA=",
+            "subject": "RE: SEF Field Engineer - Move forward to the next step",
+            "conversationId": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "received": "2026-01-15T21:04:50Z",
+            "folder": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAuAAAAAAB5T2z6T9yVRIpALvZ7Q3jrAQCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAAA="
+        },
+        "database_record": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAAAAEJAACmw3CNPZbYSZ3OcRIMgHGjAACjuX7LAAA=",
+            "conversation_id": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "subject": "Re: SEF Field Engineer - Move forward to the next step",
+            "final_folder": "Sent Items"
+        },
+        "match_results": {
+            "message_id_matches": false,
+            "conversation_id_matches": true,
+            "subject_matches": true
+        },
+        "conclusion": "SCENARIO 2: Conversation ID matches but Message ID changed - Use conversation ID instead"
+    },
+    {
+        "outlook_email": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAAAAEKAACmw3CNPZbYSZ3OcRIMgHGjAACkFQx_AAA=",
+            "subject": "Re: SEF Field Engineer - Move forward to the next step",
+            "conversationId": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQANEQPOQYY45Iue9ucqw6xcM=",
+            "received": "2026-01-15T21:05:53Z",
+            "folder": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAuAAAAAAB5T2z6T9yVRIpALvZ7Q3jrAQCmw3CNPZbYSZ3OcRIMgHGjAAAAAAEKAAA="
+        },
+        "database_record": null,
+        "match_results": {
+            "message_id_matches": false,
+            "conversation_id_matches": false,
+            "subject_matches": false
+        },
+        "conclusion": "SCENARIO 3: No database record found for this email"
+    },
+    {
+        "outlook_email": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAACmw3CNPZbYSZ3OcRIMgHGjAADFG5AtAAA=",
+            "subject": "RE: SEF Field Engineer - Move forward to the next step",
+            "conversationId": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "received": "2026-01-20T14:49:04Z",
+            "folder": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAuAAAAAAB5T2z6T9yVRIpALvZ7Q3jrAQCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAAA="
+        },
+        "database_record": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAAAAEJAACmw3CNPZbYSZ3OcRIMgHGjAACjuX7LAAA=",
+            "conversation_id": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "subject": "Re: SEF Field Engineer - Move forward to the next step",
+            "final_folder": "Sent Items"
+        },
+        "match_results": {
+            "message_id_matches": false,
+            "conversation_id_matches": true,
+            "subject_matches": true
+        },
+        "conclusion": "SCENARIO 2: Conversation ID matches but Message ID changed - Use conversation ID instead"
+    },
+    {
+        "outlook_email": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAACmw3CNPZbYSZ3OcRIMgHGjAADFG5AsAAA=",
+            "subject": "Re: SEF Field Engineer - Move forward to the next step",
+            "conversationId": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "received": "2026-01-20T15:21:06Z",
+            "folder": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAuAAAAAAB5T2z6T9yVRIpALvZ7Q3jrAQCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAAA="
+        },
+        "database_record": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAAAAEJAACmw3CNPZbYSZ3OcRIMgHGjAACjuX7LAAA=",
+            "conversation_id": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "subject": "Re: SEF Field Engineer - Move forward to the next step",
+            "final_folder": "Sent Items"
+        },
+        "match_results": {
+            "message_id_matches": false,
+            "conversation_id_matches": true,
+            "subject_matches": true
+        },
+        "conclusion": "SCENARIO 2: Conversation ID matches but Message ID changed - Use conversation ID instead"
+    },
+    {
+        "outlook_email": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAACmw3CNPZbYSZ3OcRIMgHGjAADMLeuAAAA=",
+            "subject": "RE: SEF Field Engineer - Move forward to the next step",
+            "conversationId": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "received": "2026-01-20T18:07:26Z",
+            "folder": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAuAAAAAAB5T2z6T9yVRIpALvZ7Q3jrAQCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAAA="
+        },
+        "database_record": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAAAAEJAACmw3CNPZbYSZ3OcRIMgHGjAACjuX7LAAA=",
+            "conversation_id": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "subject": "Re: SEF Field Engineer - Move forward to the next step",
+            "final_folder": "Sent Items"
+        },
+        "match_results": {
+            "message_id_matches": false,
+            "conversation_id_matches": true,
+            "subject_matches": true
+        },
+        "conclusion": "SCENARIO 2: Conversation ID matches but Message ID changed - Use conversation ID instead"
+    },
+    {
+        "outlook_email": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAACmw3CNPZbYSZ3OcRIMgHGjAADMLeuBAAA=",
+            "subject": "RE: SEF Field Engineer - Move forward to the next step",
+            "conversationId": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "received": "2026-01-22T14:53:11Z",
+            "folder": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAuAAAAAAB5T2z6T9yVRIpALvZ7Q3jrAQCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAAA="
+        },
+        "database_record": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAAAAEJAACmw3CNPZbYSZ3OcRIMgHGjAACjuX7LAAA=",
+            "conversation_id": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "subject": "Re: SEF Field Engineer - Move forward to the next step",
+            "final_folder": "Sent Items"
+        },
+        "match_results": {
+            "message_id_matches": false,
+            "conversation_id_matches": true,
+            "subject_matches": true
+        },
+        "conclusion": "SCENARIO 2: Conversation ID matches but Message ID changed - Use conversation ID instead"
+    },
+    {
+        "outlook_email": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAACmw3CNPZbYSZ3OcRIMgHGjAADMLeuCAAA=",
+            "subject": "RE: SEF Field Engineer - Move forward to the next step",
+            "conversationId": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "received": "2026-01-22T15:28:10Z",
+            "folder": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAuAAAAAAB5T2z6T9yVRIpALvZ7Q3jrAQCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAAA="
+        },
+        "database_record": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAAAAEJAACmw3CNPZbYSZ3OcRIMgHGjAACjuX7LAAA=",
+            "conversation_id": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "subject": "Re: SEF Field Engineer - Move forward to the next step",
+            "final_folder": "Sent Items"
+        },
+        "match_results": {
+            "message_id_matches": false,
+            "conversation_id_matches": true,
+            "subject_matches": true
+        },
+        "conclusion": "SCENARIO 2: Conversation ID matches but Message ID changed - Use conversation ID instead"
+    },
+    {
+        "outlook_email": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAACmw3CNPZbYSZ3OcRIMgHGjAADMLeuDAAA=",
+            "subject": "RE: SEF Field Engineer - Move forward to the next step",
+            "conversationId": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "received": "2026-01-22T15:28:27Z",
+            "folder": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAuAAAAAAB5T2z6T9yVRIpALvZ7Q3jrAQCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAAA="
+        },
+        "database_record": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAAAAEJAACmw3CNPZbYSZ3OcRIMgHGjAACjuX7LAAA=",
+            "conversation_id": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "subject": "Re: SEF Field Engineer - Move forward to the next step",
+            "final_folder": "Sent Items"
+        },
+        "match_results": {
+            "message_id_matches": false,
+            "conversation_id_matches": true,
+            "subject_matches": true
+        },
+        "conclusion": "SCENARIO 2: Conversation ID matches but Message ID changed - Use conversation ID instead"
+    },
+    {
+        "outlook_email": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAACmw3CNPZbYSZ3OcRIMgHGjAADPYfsiAAA=",
+            "subject": "Re: SEF Field Engineer - Move forward to the next step",
+            "conversationId": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "received": "2026-01-22T23:35:26Z",
+            "folder": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAuAAAAAAB5T2z6T9yVRIpALvZ7Q3jrAQCmw3CNPZbYSZ3OcRIMgHGjAAAEiZJeAAA="
+        },
+        "database_record": {
+            "id": "AAMkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOABGAAAAAAB5T2z6T9yVRIpALvZ7Q3jrBwCmw3CNPZbYSZ3OcRIMgHGjAAAAAAEJAACmw3CNPZbYSZ3OcRIMgHGjAACjuX7LAAA=",
+            "conversation_id": "AAQkADIyNmYyNjNjLWRhN2QtNDhlYi1hY2I3LWQ3NmEwOTc5YWFiOAAQAOGovbQGJRVLiRUgIplQ1u8=",
+            "subject": "Re: SEF Field Engineer - Move forward to the next step",
+            "final_folder": "Sent Items"
+        },
+        "match_results": {
+            "message_id_matches": false,
+            "conversation_id_matches": true,
+            "subject_matches": true
+        },
+        "conclusion": "SCENARIO 2: Conversation ID matches but Message ID changed - Use conversation ID instead"
+    }
+]
