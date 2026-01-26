@@ -3,9 +3,14 @@ import { generateMagicLink, AUTH_CONFIG } from '@/lib/auth';
 
 export async function POST(request: NextRequest) {
   try {
-    // Get the base URL from the request
-    const url = new URL(request.url);
-    const baseUrl = `${url.protocol}//${url.host}`;
+    // Get the base URL - prefer forwarded headers for production behind reverse proxy
+    const forwardedHost = request.headers.get('x-forwarded-host');
+    const forwardedProto = request.headers.get('x-forwarded-proto') || 'https';
+    const host = forwardedHost || request.headers.get('host') || new URL(request.url).host;
+
+    // Use https in production, http only for localhost
+    const protocol = host.includes('localhost') || host.includes('127.0.0.1') ? 'http' : forwardedProto;
+    const baseUrl = `${protocol}://${host}`;
 
     // Generate the magic link
     const magicLink = generateMagicLink(baseUrl);
